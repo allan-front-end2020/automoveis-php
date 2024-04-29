@@ -61,8 +61,7 @@ if (
         $componentes = isset($_POST['componentes']) ? $_POST['componentes'] : [];
 
         $objAuto->cadastrar($componentes);
-        // $objAuto->cadastrar($componentes);
-        
+    
         // Redirecionar após o sucesso
         header('Location:index.php?status=success');
         exit;

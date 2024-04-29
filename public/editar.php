@@ -31,6 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $objAuto->preco = $_POST['preco']; 
     $objAuto->preco_fipe = $_POST['preco_fipe']; 
 
+   
+    $novosComponentes = isset($_POST['componentes']) ? $_POST['componentes'] : [];
+
+    $objAuto->atualizarComponentes($novosComponentes);
 
     if ($objAuto->placa !== $_POST['placa'] || $objAuto->renavam !== $_POST['renavam']) {
         $placa = htmlspecialchars($_POST['placa']);
@@ -54,7 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 }, 8000);
                             </script>';
         } else {
-           
             $objAuto->placa = $_POST['placa'];
             $objAuto->renavam = $_POST['renavam'];
             $objAuto->atualizar();          

@@ -1,5 +1,102 @@
 
-    <h1>{{name}}</h1>
+
+<main>
+  
+    <section>
+        <a href="cadastrar.php" class="btn btn-success">Cadastrar Automóvel</a>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <section>
+                    <form method="get">
+                        <div class="row my-4">
+                            <div class="col">
+                                <label for="">Descrição</label>
+                                <input type="text" name="buscaDescricao" class="form-control" >
+                            </div>
+                            <div class="col">
+                                <label for="">Placa</label>
+                                <input type="text" name="buscaPlaca" class="form-control" >
+                            </div>
+                            <div class="col">
+                                <label for="">Renavam</label>
+                                <input type="text" name="buscaRenavam" class="form-control" >
+                            </div>
+                            <div class="col-2">
+                                <label for="">Marca</label>
+                                <div class="position-relative">
+                                    <select name="buscaMarca" class="form-control">
+                                        <option value="" disabled selected>Selecione marca</option>
+ 
+                                        
+                                    </select>
+                                    <i class="bi bi-caret-down-fill position-absolute" style="right: 12px; top: 50%; transform: translateY(-50%);"></i>
+                                </div>
+
+                            </div>
+                            <div class="col-2">
+                                <label for="">Ano Modelo</label>
+                                <div class="position-relative">
+                                    <select name="buscaAnoModelo" class="form-control">
+                                      
+                                    </select>
+                                    <i class="bi bi-caret-down-fill position-absolute" style="right: 12px; top: 50%; transform: translateY(-50%);"></i>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <label for="">Ano Fabricação</label>
+                                <div class="position-relative">
+                                    <select name="buscaAnoFabricacao" class="form-control">
+                                     
+                                    </select>
+                                    <i class="bi bi-caret-down-fill position-absolute" style="right: 12px; top: 50%; transform: translateY(-50%);"></i>
+                                </div>
+                            </div>
 
 
-    <h1>{{description}}</h1>
+                            <div class="col">
+                                <label for="">Cor</label>
+                                <input type="text" name="buscaCor" class="form-control" >
+                            </div>
+                            <div class="col d-flex align-items-end ml-2">
+                                <button type="submit" class="btn btn-primary ml-3" style="margin-right: 4px;"><i class="bi bi-search"></i></button>
+                                <button type="button" style="margin-right: 5px;" class="btn btn-secondary mr-2">Limpar</button>
+                                <a href="relatorio.php" class="btn btn-info mr-2" target="_blank"><i class="bi bi-printer"></i></a>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <!-- <button type="button" onclick="alterarOrdemListagem()" class="btn btn-primary">Alterar Ordem</button> -->
+
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Placa</th>
+                    <th>Renavam</th>
+                    <th>Ano modelo</th>
+                    <th>Ano de fabricação</th>
+                    <th>Cor</th>
+                    <th>Km</th>
+                    <th>Marca</th>
+                    <th>Preço </th>
+                    <th>Preço Fipe</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+              
+        </table>
+        <section>
+        </section>
+    </section>
+</main>

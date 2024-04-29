@@ -31,7 +31,7 @@ private static function getContentView($view){
   $keys = array_keys($vars);
 
   $keys = array_map(function($item){
-    return '{{'.$item.'}}'; // Adicionado ponto e vírgula aqui
+    return '{{'.$item.'}}'; 
 }, $keys);
 
 
