@@ -5,7 +5,7 @@ define('TITLE', 'Dados cadastrais');
 
 use \App\Entity\Automovel;
 
-$objAuto = new Automovel;
+// $objAuto = new Automovel;
 
 // Variável para armazenar a mensagem
 $mensagem = '';

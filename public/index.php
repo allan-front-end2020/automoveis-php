@@ -2,10 +2,23 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+
+use \App\Http\Router;
+use \App\Http\Response;
 use \App\Controller\ListaAutomovel;
 
+define('URL', 'http://localhost/crud');
 
-echo ListaAutomovel::getListagem();
+$router = new Router(URL);
+
+// Rota de ListaAutomovel
+ $router->get('/', [
+     function(){
+     return  new Response(200, ListaAutomovel::getListagem(), );
+     }
+ ]);
+
+
 
 
 
