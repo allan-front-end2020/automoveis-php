@@ -1,7 +1,7 @@
 <?php
 
 
-namespace  public\app\model\Entity;
+namespace  App\Model;
 
 
 

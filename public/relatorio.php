@@ -4,7 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 use \App\Entity\Automovel;
 
 // Buscar todos os automóveis cadastrados
-$automoveis = Automovel::getVagas();
+//$automoveis = Automovel::getVagas();
 
 include './includes/header.php';
 ?>

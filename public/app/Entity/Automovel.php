@@ -8,7 +8,7 @@ use App\Entity\Componente;
 
 use \PDO;
 
-class Automovel {
+class AutomovelDeAutomovel {
 
     public $id;
     public $descricao;

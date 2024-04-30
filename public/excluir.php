@@ -7,7 +7,7 @@ require __DIR__ . '/vendor/autoload.php';
 if (isset($_POST['id'])) {
 $idAutomovel = $_POST['id'];
 // $objAuto = Automovel::getAutomovel($idAutomovel);
-$automovel = new Automovel();
+//$automovel = new Automovel();
 $dadosAutomoveis = $automovel->getAutomovel($idAutomovel);
 
 
