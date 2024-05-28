@@ -3,6 +3,7 @@ namespace App\Http;
 
 use App\Http\Request;
 use  \Closure;
+use Exception;
 
 class Router {
 
@@ -16,7 +17,7 @@ private $request = [] ;
 
 
 
-public function __construct($url){
+public function __construct($url){ 
     $this->request = new Request();
     $this->url= $url;
     $this->prefix = '/crud';
@@ -25,12 +26,10 @@ public function __construct($url){
 /**
  * Método Responsável por define o prefixo das rotas
  */
-public function setPrefix(){
+public function setPrefix() {
     //Informações da URL atual 
     $parseUrl = parse_url($this->url);
-
     $this->prefix = $parseUrl['path'] ? : '';
-
 }
 
 /**
@@ -39,7 +38,7 @@ public function setPrefix(){
  * @param string $route
  * @param array $params
  */
-private function addRoute($method, $route, $params=[]){
+private function addRoute($method, $route, $params=[]) {
     //VALIDAÇÃO DO PARAMENTROS
 
     foreach($params as $key => $value){
@@ -56,21 +55,34 @@ private function addRoute($method, $route, $params=[]){
 
     //ADICIONA  A ROTA DENTRO DA  CLASSE
     $this->routes[$patternRoute][$method] = $params;
-
-
 }
-
 
 /**
  * Método Responsável por define uma rota de GET
  */
-public function get($route, $params = []){
+public function get($route, $params = []) {
    return $this->addRoute('GET', $route, $params);
 
 }
 
 
+public function getRoute(){
+    
+}
 
+/**
+ * Método Responsável por executar a rota atual
+ */
+public function run() {
+  try{
+     $route = $this->getRoute();
+  }catch(Exception $e){
+    return new Response( $e->getCode(), $e->getMessage() );
+
+  }
+
+ }
+ 
 
 
 

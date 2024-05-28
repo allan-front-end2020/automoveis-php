@@ -3,22 +3,27 @@
 require __DIR__ . '/vendor/autoload.php';
 
 
+use \App\Controller\ListaAutomovel;
 use \App\Http\Router;
 use \App\Http\Response;
-use \App\Controller\ListaAutomovel;
 
 define('URL', 'http://localhost/crud');
 
-$router = new Router(URL);
 
-// Rota de ListaAutomovel
- $router->get('/', [
+$obRoter = new Router (URL);
+// echo "<pre>";
+// print_r($obRoter);
+// echo "<pre>";
+
+// $router = new Router(URL);
+
+ $obRoter->get('/', [
      function(){
      return  new Response(200, ListaAutomovel::getListagem(), );
      }
  ]);
 
-
+ $obRoter->run()->sendResponse();
 
 
 
